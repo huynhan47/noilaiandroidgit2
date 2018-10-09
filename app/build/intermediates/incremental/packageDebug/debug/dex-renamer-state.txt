@@ -1,0 +1,4 @@
+#Tue Oct 09 16:23:17 ICT 2018
+base.0=/Users/poscoictvn/Desktop/tdp/app/build/intermediates/transforms/dexMerger/debug/228
+path.0=classes.dex
+renamed.0=classes.dex

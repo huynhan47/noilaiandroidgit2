@@ -1,0 +1,67 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.jjm.android.quizanoi"
+    android:versionCode="2"
+    android:versionName="1.1" >
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-sdk
+        android:minSdkVersion="19"
+        android:targetSdkVersion="23" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic144"
+        android:label="@string/app_name"
+        android:name = ".MyApplication"
+        android:theme="@style/AppTheme" >
+        <provider android:name="android.support.v4.content.FileProvider" android:exported="false" android:authorities="noilai.quiz" android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths" />
+        </provider>
+        <activity
+            android:name=".activity.MainActivity"
+            android:label="@string/app_name"
+            android:theme= "@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" /> 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
+        <activity
+            android:name=".activity.Quiz_new"
+            android:label="No Quiz"
+            android:configChanges="orientation|screenSize"
+            android:theme= "@style/Theme.AppCompat.Light.NoActionBar">
+        </activity>
+        <activity
+            android:name=".activity.KetQuaDungActivity"
+            android:label="@string/app_name"
+            android:configChanges="orientation|screenSize">
+
+        </activity>
+        <activity
+            android:name=".activity.KiemBitCoinActivity"
+            android:label="@string/app_name"
+            android:theme= "@style/Theme.AppCompat.Light.NoActionBar">
+            android:configChanges="orientation|screenSize">
+
+        </activity>
+        <activity
+            android:name=".activity.About"
+            android:label="Gợi Ý"
+            android:theme= "@style/Theme.AppCompat.Dialog"
+           >
+
+        </activity> 
+        <activity
+
+            android:name=".activity.Settings"
+            android:label="@string/title_activity_settings" >
+        </activity>
+    </application>
+
+</manifest>

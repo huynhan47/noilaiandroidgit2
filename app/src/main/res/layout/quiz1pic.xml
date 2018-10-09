@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout n1:background="#010d23" n1:layout_width="fill_parent" n1:layout_height="fill_parent"
+	xmlns:n1="http://schemas.android.com/apk/res/android"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout n1:gravity="left" n1:id="@id/LinearLayoutbar" n1:background="@drawable/bg_topbar" n1:layout_width="fill_parent" n1:layout_height="50.0dip" n1:layout_alignParentLeft="true" n1:layout_alignParentTop="true">
+
+		<Button
+			n1:id="@+id/btn_back"
+			n1:layout_width="40.0dip"
+			n1:layout_height="40.0dip"
+            n1:layout_marginLeft="1dp"
+            n1:layout_marginTop="5dp"
+            n1:layout_alignParentTop="true"
+			n1:background="@drawable/btn_back_left" />
+
+            <TextView
+                n1:id="@+id/tv_cauhoi"
+                n1:layout_width="wrap_content"
+                n1:layout_height="40.0dip"
+                n1:layout_centerHorizontal="true"
+                n1:layout_margin="5.0dip"
+                n1:layout_marginLeft="20.0dp"
+
+                n1:gravity="center"
+                n1:text="20.41"
+                n1:textColor="#ffffffff"
+                n1:textSize="23.0sp"
+                n1:textStyle="bold" />
+		<TextView    n1:layout_marginTop="5dp"
+            n1:layout_alignParentTop="true" n1:layout_alignParentRight="true" n1:textSize="18dp" n1:textStyle="bold" n1:textColor="#ffffffff" n1:gravity="center" n1:id="@+id/tvdiemso" n1:background="@drawable/bitscore" n1:paddingRight="1.0dip" n1:paddingBottom="3.0dip" n1:layout_width="92.4dip" n1:layout_height="40.0dip" n1:paddingLeft="20dp" n1:layout_marginLeft="1dp"  n1:text="10000"  />
+
+	</RelativeLayout>
+	<LinearLayout n1:orientation="vertical" n1:id="@+id/LinearLayoutbg" n1:background="#010d23" n1:layout_width="fill_parent" n1:layout_height="wrap_content" n1:layout_below="@+id/LinearLayoutbar">
+		<LinearLayout n1:layout_gravity="center_horizontal" n1:orientation="vertical" n1:id="@+id/LinearLayout_imageview" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+			<LinearLayout n1:gravity="center_horizontal" n1:orientation="horizontal" n1:id="@+id/LinearLayout_imageview_12" n1:layout_width="fill_parent" n1:layout_height="wrap_content" n1:layout_marginTop="0.0dip">
+				<LinearLayout n1:gravity="center_horizontal" n1:orientation="vertical" n1:id="@+id/LinearLayout_imageview_1word" n1:layout_width="wrap_content" n1:layout_height="wrap_content">
+					<FrameLayout  n1:orientation="vertical" n1:id="@+id/LinearLayout_broder_imageview_2"   n1:layout_width="350.0dip" n1:layout_height="250.0dip" n1:layout_margin="0.0dip">
+
+						<ImageView n1:id="@+id/imageView_hinhanh1" n1:layout_width="fill_parent" n1:layout_height="fill_parent" n1:layout_margin="10.0dip" n1:scaleType="fitCenter"  />
+
+						<ImageView
+							n1:id="@+id/imageView_hinhanh1_frame"
+							n1:layout_width="fill_parent"
+							n1:layout_height="fill_parent"
+							n1:layout_margin="1.0dip"
+							n1:background="@drawable/framepng"
+							n1:scaleType="fitCenter" />
+
+					</FrameLayout>
+					<!--<TextView n1:textSize="32.0sp" n1:textStyle="bold" n1:textColor="#ffffffff" n1:id="@+id/tv_firstword" n1:padding="5.0dip" n1:layout_width="wrap_content" n1:layout_height="wrap_content" n1:text="WORD1" />-->
+				</LinearLayout>
+				<!--<LinearLayout n1:gravity="center_horizontal" n1:orientation="vertical" n1:id="@+id/LinearLayout_imageview_2word" n1:layout_width="wrap_content" n1:layout_height="wrap_content">-->
+					<!--<LinearLayout n1:orientation="vertical" n1:id="@+id/LinearLayout_broder_imageview_2" n1:background="#fff5ad6d" n1:padding="2.0dip" n1:layout_width="160.0dip" n1:layout_height="160.0dip" n1:layout_margin="3.0dip">-->
+						<!--<ImageView n1:id="@+id/imageView_hinhanh2" n1:layout_width="fill_parent" n1:layout_height="fill_parent" n1:layout_margin="2.0dip" n1:scaleType="fitXY" />-->
+					<!--</LinearLayout>-->
+					<!--<TextView n1:textSize="32.0sp" n1:textStyle="bold" n1:textColor="#ffffffff" n1:id="@+id/tv_secondword" n1:padding="5.0dip" n1:layout_width="wrap_content" n1:layout_height="wrap_content" n1:text="WORD2" />-->
+				<!--</LinearLayout>-->
+			</LinearLayout>
+		</LinearLayout>
+		<TableLayout n1:layout_width="fill_parent" n1:layout_height="wrap_content" n1:layout_marginTop="3.0dip" n1:layout_marginBottom="3.0dip">
+			<TableRow n1:gravity="center" n1:id="@+id/tableRow1" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+
+				<TextView
+					n1:id="@+id/tvochu1"
+					n1:layout_width="35.0dip"
+					n1:layout_height="35.0dip"
+					n1:layout_margin="2.0dip"
+					n1:background="@drawable/stroke"
+					n1:gravity="center"
+					n1:text="L"
+					n1:textAppearance="?android:textAppearanceLargeInverse"
+					n1:textStyle="bold" />
+
+				<TextView
+					n1:id="@+id/tvochu2"
+					n1:layout_width="35.0dip"
+					n1:layout_height="35.0dip"
+					n1:layout_margin="2.0dip"
+					n1:background="@drawable/stroke"
+					n1:gravity="center"
+					n1:text="A"
+					n1:textAppearance="?android:textAppearanceLargeInverse"
+					n1:textStyle="bold" />
+
+				<TextView
+					n1:id="@+id/tvochu3"
+					n1:layout_width="39dp"
+					n1:layout_height="35.0dip"
+					n1:layout_margin="2.0dip"
+					n1:background="@drawable/stroke"
+					n1:gravity="center"
+					n1:text="I"
+					n1:textAppearance="?android:textAppearanceLargeInverse"
+					n1:textStyle="bold" />
+
+				<TextView
+					n1:id="@+id/tvochu4"
+					n1:layout_width="35.0dip"
+					n1:layout_height="35.0dip"
+					n1:layout_margin="2.0dip"
+					n1:background="@drawable/stroke"
+					n1:gravity="center"
+					n1:text="C"
+					n1:textAppearance="?android:textAppearanceLargeInverse"
+					n1:textStyle="bold" />
+				<TextView n1:textAppearance="?android:textAppearanceLargeInverse" n1:textStyle="bold" n1:gravity="center" n1:id="@+id/tvochu5" n1:background="@drawable/stroke" n1:layout_width="35.0dip" n1:layout_height="35.0dip" n1:layout_margin="2.0dip" n1:text="H" />
+
+				<TextView
+					n1:id="@+id/tvochu6"
+					n1:layout_width="35.0dip"
+					n1:layout_height="35.0dip"
+					n1:layout_margin="2.0dip"
+					n1:background="@drawable/stroke"
+					n1:gravity="center"
+					n1:text="U"
+					n1:textAppearance="?android:textAppearanceLargeInverse"
+					n1:textStyle="bold" />
+
+				<TextView
+					n1:id="@+id/tvochu7"
+					n1:layout_width="35.0dip"
+					n1:layout_height="35.0dip"
+					n1:layout_margin="2.0dip"
+					n1:background="@drawable/stroke"
+					n1:gravity="center"
+					n1:text="S"
+					n1:textAppearance="?android:textAppearanceLargeInverse"
+					n1:textStyle="bold" />
+
+				<TextView
+					n1:id="@+id/tvochu8"
+					n1:layout_width="35.0dip"
+					n1:layout_height="35.0dip"
+					n1:layout_margin="2.0dip"
+					n1:background="@drawable/stroke"
+					n1:gravity="center"
+					n1:text="T"
+					n1:textAppearance="?android:textAppearanceLargeInverse"
+					n1:textStyle="bold" />
+			</TableRow>
+			<TableRow n1:gravity="center" n1:id="@+id/tableRow2" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+
+				<TextView
+					n1:id="@+id/tvochu9"
+					n1:layout_width="35.0dip"
+					n1:layout_height="35.0dip"
+					n1:layout_margin="2.0dip"
+					n1:background="@drawable/stroke"
+					n1:gravity="center"
+					n1:text="U"
+					n1:textAppearance="?android:textAppearanceLargeInverse"
+					n1:textStyle="bold" />
+
+				<TextView
+					n1:id="@+id/tvochu10"
+					n1:layout_width="35.0dip"
+					n1:layout_height="35.0dip"
+					n1:layout_margin="2.0dip"
+					n1:background="@drawable/stroke"
+					n1:gravity="center"
+					n1:text="D"
+					n1:textAppearance="?android:textAppearanceLargeInverse"
+					n1:textStyle="bold" />
+				<TextView n1:textAppearance="?android:textAppearanceLargeInverse" n1:textStyle="bold" n1:gravity="center" n1:id="@+id/tvochu11" n1:background="@drawable/stroke" n1:layout_width="35.0dip" n1:layout_height="35.0dip" n1:layout_margin="2.0dip" n1:text="I" />
+
+				<TextView
+					n1:id="@+id/tvochu12"
+					n1:layout_width="35.0dip"
+					n1:layout_height="35.0dip"
+					n1:layout_margin="2.0dip"
+					n1:background="@drawable/stroke"
+					n1:gravity="center"
+					n1:text="O"
+					n1:textAppearance="?android:textAppearanceLargeInverse"
+					n1:textStyle="bold" />
+
+				<TextView
+					n1:id="@+id/tvochu13"
+					n1:layout_width="35.0dip"
+					n1:layout_height="35.0dip"
+					n1:layout_margin="2.0dip"
+					n1:background="@drawable/stroke"
+					n1:gravity="center"
+					n1:text="2"
+					n1:textAppearance="?android:textAppearanceLargeInverse"
+					n1:textStyle="bold" />
+
+				<TextView
+					n1:id="@+id/tvochu14"
+					n1:layout_width="35.0dip"
+					n1:layout_height="35.0dip"
+					n1:layout_margin="2.0dip"
+					n1:background="@drawable/stroke"
+					n1:gravity="center"
+					n1:text="0"
+					n1:textAppearance="?android:textAppearanceLargeInverse"
+					n1:textStyle="bold" />
+
+				<TextView
+					n1:id="@+id/tvochu15"
+					n1:layout_width="35.0dip"
+					n1:layout_height="35.0dip"
+					n1:layout_margin="2.0dip"
+					n1:background="@drawable/stroke"
+					n1:gravity="center"
+					n1:text="1"
+					n1:textAppearance="?android:textAppearanceLargeInverse"
+					n1:textStyle="bold" />
+
+				<TextView
+					n1:id="@+id/tvochu16"
+					n1:layout_width="35.0dip"
+					n1:layout_height="35.0dip"
+					n1:layout_margin="2.0dip"
+					n1:background="@drawable/stroke"
+					n1:gravity="center"
+					n1:text="8"
+					n1:textAppearance="?android:textAppearanceLargeInverse"
+					n1:textStyle="bold" />
+			</TableRow>
+		</TableLayout>
+	</LinearLayout>
+
+	<RelativeLayout
+		n1:id="@+id/tablayout_option"
+		n1:layout_width="fill_parent"
+		n1:layout_height="wrap_content"
+		n1:layout_above="@+id/tablayout_buton"
+		n1:layout_alignParentStart="true"
+
+		>
+
+		<!--<Button n1:id="@+id/button_facebook" n1:background="@drawable/button_share_retangle_effect" n1:layout_width="40.0dip" n1:layout_height="40.0dip" n1:layout_margin="3.0dip" />-->
+		<!--<Button n1:id="@+id/bt_goiy" n1:background="@drawable/button_goiy_effect" n1:layout_width="40.0dip" n1:layout_height="40.0dip" n1:layout_margin="3.0dip" />-->
+		<!--<Button n1:id="@+id/bt_firstword" n1:background="@drawable/button_word1_effect" n1:layout_width="40.0dip" n1:layout_height="40.0dip" n1:layout_margin="3.0dip" />-->
+		<!--<Button n1:id="@+id/bt_secondword" n1:background="@drawable/button_word2_effect" n1:layout_width="40.0dip" n1:layout_height="40.0dip" n1:layout_margin="3.0dip" />-->
+		<!--<Button n1:id="@+id/bt_reload" n1:background="@drawable/button_reload_effect" n1:layout_width="40.0dip" n1:layout_height="40.0dip" n1:layout_margin="3.0dip" />-->
+		<LinearLayout
+			n1:id="@+id/LinearLayout_HoiBanBe"
+			n1:layout_width="wrap_content"
+			n1:layout_height="wrap_content"
+			n1:gravity="center"
+			n1:orientation="vertical"
+			n1:layout_alignParentBottom="true"
+			n1:layout_alignParentStart="true"
+			>
+
+			<Button
+				n1:id="@+id/btn_share_question"
+				n1:layout_width="40.0dip"
+				n1:layout_height="40.0dip"
+				n1:layout_alignLeft="@id/LinearLayout_HoiBanBe"
+				n1:layout_alignParentStart="true"
+
+				n1:background="@drawable/share_logo" />
+
+			<TextView
+				n1:id="@+id/tv_share_question"
+				n1:layout_width="wrap_content"
+				n1:layout_height="wrap_content"
+				n1:text="Hỏi Bạn Bè"
+				n1:textColor="#FFFFFF"
+				n1:textSize="11sp"
+				n1:textStyle="bold" />
+		</LinearLayout>
+
+		<LinearLayout
+			n1:layout_width="wrap_content"
+			n1:layout_height="wrap_content"
+			n1:gravity="center"
+			n1:layout_centerHorizontal="true"
+			n1:layout_alignParentBottom="true"
+			>
+
+			<ImageView
+				n1:id="@+id/QuynhMCImage"
+				n1:layout_width="100dp"
+				n1:layout_height="100dp"
+				/>
+
+		</LinearLayout>
+
+		<LinearLayout
+			n1:id="@+id/LinearLayout_Bitcoin"
+			n1:layout_width="wrap_content"
+			n1:layout_height="wrap_content"
+			n1:orientation="vertical"
+			n1:gravity="center"
+			n1:layout_alignParentEnd="true"
+			n1:layout_alignParentBottom="true"
+			>
+
+			<Button
+				n1:id="@+id/bt_skiplevel"
+				n1:layout_width="40.0dip"
+				n1:layout_height="40.0dip"
+				n1:background="@drawable/skip_icon" />
+
+			<TextView
+				n1:id="@+id/tv_skip"
+				n1:layout_width="wrap_content"
+				n1:layout_height="wrap_content"
+				n1:text="Tạm Bỏ Qua"
+				n1:textColor="#FFFFFF"
+
+				n1:textSize="11sp"
+				n1:textStyle="bold" />
+		</LinearLayout>
+
+	</RelativeLayout>
+	<TableLayout n1:id="@+id/tablayout_buton" n1:background="@drawable/bg_topbar" n1:padding="2.0dip" n1:layout_width="fill_parent" n1:layout_height="wrap_content" n1:layout_above="@id/Linearlayout_ads_2pics1word" n1:layout_centerHorizontal="true">
+		<TableRow n1:gravity="center" n1:id="@+id/tableRow3" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+			<Button n1:textAppearance="?android:textAppearanceLarge" n1:textStyle="bold" n1:id="@+id/bt_o1" n1:background="@drawable/stroke_answer" n1:layout_width="40.0dip" n1:layout_height="40.0dip" n1:layout_margin="2.0dip" n1:text="D" />
+			<Button n1:textAppearance="?android:textAppearanceLarge" n1:textStyle="bold" n1:id="@+id/bt_o2" n1:background="@drawable/stroke_answer" n1:layout_width="40.0dip" n1:layout_height="40.0dip" n1:layout_margin="2.0dip" n1:text="U" />
+			<Button n1:textAppearance="?android:textAppearanceLarge" n1:textStyle="bold" n1:id="@+id/bt_o3" n1:background="@drawable/stroke_answer" n1:layout_width="40.0dip" n1:layout_height="40.0dip" n1:layout_margin="2.0dip" n1:text="O" />
+			<Button n1:textAppearance="?android:textAppearanceLarge" n1:textStyle="bold" n1:id="@+id/bt_o4" n1:background="@drawable/stroke_answer" n1:layout_width="40.0dip" n1:layout_height="40.0dip" n1:layout_margin="2.0dip" n1:text="I" />
+			<Button n1:textAppearance="?android:textAppearanceLarge" n1:textStyle="bold" n1:id="@+id/bt_o5" n1:background="@drawable/stroke_answer" n1:layout_width="40.0dip" n1:layout_height="40.0dip" n1:layout_margin="2.0dip" n1:text="H" />
+			<Button n1:textAppearance="?android:textAppearanceLarge" n1:textStyle="bold" n1:id="@+id/bt_o6" n1:background="@drawable/stroke_answer" n1:layout_width="40.0dip" n1:layout_height="40.0dip" n1:layout_margin="2.0dip" n1:text="I" />
+			<Button n1:textAppearance="?android:textAppearanceLarge" n1:textStyle="bold" n1:id="@+id/bt_o7" n1:background="@drawable/stroke_answer" n1:layout_width="40.0dip" n1:layout_height="40.0dip" n1:layout_margin="2.0dip" n1:text="N" />
+			<Button n1:textAppearance="?android:textAppearanceLarge" n1:textStyle="bold" n1:id="@+id/bt_o8" n1:background="@drawable/stroke_answer" n1:layout_width="40.0dip" n1:layout_height="40.0dip" n1:layout_margin="2.0dip" n1:text="N" />
+		</TableRow>
+		<TableRow n1:gravity="center" n1:id="@+id/tableRow4" n1:layout_width="wrap_content" n1:layout_height="wrap_content">
+
+			<Button n1:textAppearance="?android:textAppearanceLarge" n1:textStyle="bold" n1:id="@+id/bt_o9" n1:background="@drawable/stroke_answer" n1:layout_width="40.0dip" n1:layout_height="40.0dip" n1:layout_margin="2.0dip" n1:text="T" />
+			<Button n1:textAppearance="?android:textAppearanceLarge" n1:textStyle="bold" n1:id="@+id/bt_o10" n1:background="@drawable/stroke_answer" n1:layout_width="40.0dip" n1:layout_height="40.0dip" n1:layout_margin="2.0dip" n1:text="I" />
+			<Button n1:textAppearance="?android:textAppearanceLarge" n1:textStyle="bold" n1:id="@+id/bt_o11" n1:background="@drawable/stroke_answer" n1:layout_width="40.0dip" n1:layout_height="40.0dip" n1:layout_margin="2.0dip" n1:text="M" />
+			<Button n1:textAppearance="?android:textAppearanceLarge" n1:textStyle="bold" n1:id="@+id/bt_o12" n1:background="@drawable/stroke_answer" n1:layout_width="40.0dip" n1:layout_height="40.0dip" n1:layout_margin="2.0dip" n1:text="C" />
+			<Button n1:textAppearance="?android:textAppearanceLarge" n1:textStyle="bold" n1:id="@+id/bt_o13" n1:background="@drawable/stroke_answer" n1:layout_width="40.0dip" n1:layout_height="40.0dip" n1:layout_margin="2.0dip" n1:text="H" />
+			<Button n1:textAppearance="?android:textAppearanceLarge" n1:textStyle="bold" n1:id="@+id/bt_o14" n1:background="@drawable/stroke_answer" n1:layout_width="40.0dip" n1:layout_height="40.0dip" n1:layout_margin="2.0dip" n1:text="U" />
+			<Button n1:textAppearance="?android:textAppearanceLarge" n1:textStyle="bold" n1:id="@+id/bt_o15" n1:background="@drawable/stroke_answer" n1:layout_width="40.0dip" n1:layout_height="40.0dip" n1:layout_margin="2.0dip" n1:text="H" />
+			<Button n1:textAppearance="?android:textAppearanceLarge" n1:textStyle="bold" n1:id="@+id/bt_o16" n1:background="@drawable/stroke_answer" n1:layout_width="40.0dip" n1:layout_height="40.0dip" n1:layout_margin="2.0dip" n1:text="H" />
+		</TableRow>
+	</TableLayout>
+	<LinearLayout
+		n1:orientation="vertical"
+		n1:id="@+id/Linearlayout_ads_2pics1word"
+		n1:layout_width="fill_parent"
+		n1:layout_height="40dp"
+		n1:layout_alignParentBottom="true"
+		n1:layout_centerHorizontal="true"
+		>
+
+		<com.google.android.gms.ads.AdView xmlns:n2="http://schemas.android.com/apk/res-auto"
+			n1:id="@+id/adView_2picstoword"
+			n1:layout_width="match_parent"
+			n1:layout_height="50dp"
+			n1:layout_gravity="center_horizontal"
+			n1:visibility="visible"
+			n2:adSize = "SMART_BANNER"
+			n2:adUnitId="ca-app-pub-8204407936442788/9006034085"
+			/>
+	</LinearLayout>
+	<!--<LinearLayout android:orientation="vertical" android:id="@+id/Linearlayout_ads_2pics1word" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true">-->
+		<!--<com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto" android:layout_gravity="left|right|center_horizontal|fill_horizontal|center|fill|start|end" android:id="@+id/adView_2picstoword" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" ads:adSize="SMART_BANNER" ads:adUnitId="@string/admob_banner_id" />-->
+	<!--</LinearLayout>-->
+
+</RelativeLayout>

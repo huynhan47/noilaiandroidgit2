@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:background="@drawable/retro_video_watch" android:layout_width="match_parent" android:layout_height="match_parent">
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|center_horizontal"
+            android:id="@+id/progressBar"
+            android:progressDrawable="@drawable/progress_bar"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true">
+        </ProgressBar>
+        <Button
+            android:id="@+id/btn_watch_video"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/retro_tv"
+            android:gravity="center_vertical|center_horizontal"
+            android:text=""
+            android:textColor="#ffffff"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <!--<TextView-->
+            <!--android:id="@+id/tv_bitcoin"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_above="@+id/btn_watch_video"-->
+            <!--android:layout_alignLeft="@+id/btn_watch_video"-->
+            <!--android:layout_alignStart="@+id/btn_watch_video"-->
+            <!--android:layout_marginBottom="27dp"-->
+            <!--android:layout_marginLeft="110dp"-->
+            <!--android:layout_marginStart="110dp"-->
+            <!--android:text="TextView" />-->
+        <TextView    android:layout_marginTop="5dp"
+            android:layout_alignParentTop="true" android:layout_alignParentRight="true"  android:textSize="18dp" android:textStyle="bold" android:textColor="#ffffffff" android:gravity="center" android:id="@+id/tv_bitcoin" android:background="@drawable/bitscore" android:paddingBottom="3.0dip"  android:paddingLeft="20.0dip" android:layout_width="92.4dip" android:layout_height="40.0dip"  android:text="10000"  />
+
+</RelativeLayout>

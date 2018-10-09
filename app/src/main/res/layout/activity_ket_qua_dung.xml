@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    n1:layout_width="fill_parent"
+    n1:layout_height="fill_parent"
+    xmlns:n1="http://schemas.android.com/apk/res/android"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/retro_ketquadung"
+
+    >
+<LinearLayout
+    n1:layout_width="300dp"
+    n1:layout_height="wrap_content"
+    n1:id="@+id/resultLayout"
+    n1:orientation="vertical"
+    n1:layout_centerHorizontal="true"
+    >
+    <TextView
+        n1:id="@+id/tvloichuc"
+        n1:layout_width="fill_parent"
+        n1:layout_height="60.0dip"
+        n1:layout_alignParentLeft="true"
+        n1:layout_alignParentStart="true"
+        n1:layout_alignParentTop="true"
+        n1:layout_gravity="center_horizontal"
+        n1:gravity="center"
+        n1:padding="5.0dip"
+        n1:textColor="#ffffff"
+        n1:textSize="24.0sp"
+        android:shadowColor="#DC3F1C"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="1"
+         />
+
+    <ImageView n1:id="@+id/iv_image_result" n1:layout_width="128dp" n1:layout_height="128dp" n1:layout_margin="5.0dip" n1:scaleType="fitXY" n1:layout_above="@id/resultLayout" n1:layout_centerHorizontal="true" />
+
+    <TextView
+        n1:id="@+id/tv_laichu"
+        n1:layout_width="wrap_content"
+        n1:layout_height="wrap_content"
+
+        n1:layout_marginBottom="5.0dip"
+        n1:layout_gravity="center_horizontal"
+        android:shadowColor="#4f0a0d"
+        android:shadowDx="4"
+
+        android:shadowDy="4"
+        android:shadowRadius="4"
+        n1:gravity="center"
+        n1:text="Tượng Lo"
+        n1:textAppearance="?android:textAppearanceLarge"
+        n1:textColor="#ffffff"
+        n1:textSize="48.0sp"
+        n1:textStyle="bold" />
+    <!--<TextView n1:textAppearance="?android:textAppearanceLarge" n1:textStyle="bold" n1:textColor="#ff3a7bf2" n1:id="@+id/textView_chinhxac" n1:layout_width="wrap_content" n1:layout_height="wrap_content" n1:layout_marginTop="5.0dip" n1:layout_marginBottom="5.0dip" n1:text="Chính Xác!" n1:layout_above="@id/iv_image_result" n1:layout_centerHorizontal="true" />-->
+    <ImageView
+        n1:id="@+id/iv_transfer"
+        n1:layout_width="32dp"
+        n1:layout_height="32dp"
+        n1:layout_centerHorizontal="true"
+        n1:layout_gravity="center_horizontal"
+        n1:layout_margin="5.0dip"
+        n1:scaleType="fitXY"
+        app:srcCompat="@drawable/two_sides" />
+
+    <TextView
+        n1:id="@+id/tv_dapancuoicung"
+        n1:layout_width="wrap_content"
+        n1:layout_height="wrap_content"
+        n1:layout_gravity="center_horizontal"
+        n1:layout_marginBottom="5.0dip"
+        android:shadowColor="#4f0a0d"
+        android:shadowDx="4"
+
+        android:shadowDy="4"
+        android:shadowRadius="4"
+        n1:gravity="center"
+        n1:text="Lọ Tương"
+        n1:textAppearance="?android:textAppearanceLarge"
+        n1:textColor="#ffffff"
+        n1:textSize="48.0sp"
+        n1:textStyle="bold" />
+
+
+</LinearLayout>
+    <LinearLayout
+        n1:layout_width="match_parent"
+        n1:layout_height="60dp"
+        n1:layout_below="@id/resultLayout"
+        n1:gravity="center"
+         >
+
+        <ImageView n1:src="@drawable/btc_icon" n1:id="@+id/iv_bitcoin1" n1:layout_width="50dp" n1:layout_height="50dp" n1:layout_margin="5.0dip"   n1:layout_centerHorizontal="true" />
+
+        <TextView
+            n1:id="@+id/tvcongdiem"
+            n1:layout_width="wrap_content"
+            n1:layout_height="wrap_content"
+
+            android:shadowColor="#DC3F1C"
+            android:shadowDx="4"
+            android:shadowDy="4"
+            android:shadowRadius="4"
+            android:textSize="32sp"
+            n1:text="+10 BitCoin"
+            n1:textAppearance="?android:textAppearanceLarge"
+            n1:textColor="#FFFFFF"
+            n1:textStyle="bold" />
+        <ImageView n1:src="@drawable/btc_icon" n1:id="@+id/iv_bitcoin2" n1:layout_width="50dp" n1:layout_height="50dp" n1:layout_margin="5.0dip"  n1:layout_centerHorizontal="true" />
+</LinearLayout>
+    <LinearLayout
+        n1:id="@+id/LinearLayoutbga"
+        n1:layout_width="fill_parent"
+        n1:layout_height="wrap_content"
+        n1:layout_centerHorizontal="true"
+        n1:layout_alignParentBottom="true"
+        n1:layout_marginBottom="80.0dip"
+        n1:gravity="center"
+        n1:orientation="horizontal">
+        <!--<Button n1:textSize="20.0sp" nl:background="@drawable/next" n1:textStyle="bold" n1:textColor="#ffffffff" n1:id="@+id/bt_gamekhac"  n1:layout_width="150.0dip" n1:layout_height="50.0dip" n1:layout_margin="3.0dip" n1:text="Game Khác" />-->
+        <Button
+            n1:id="@+id/bt_choitiep"
+            n1:layout_width="150.0dip"
+            n1:layout_height="50.0dip"
+            n1:layout_margin="3.0dip"
+            n1:textSize="20.0sp"
+            n1:textStyle="bold"
+            android:background="@drawable/play_retro_button" />
+    </LinearLayout>
+    <LinearLayout n1:orientation="vertical" n1:id="@+id/Linearlayout_ads_2pics1word_result" n1:layout_width="fill_parent" n1:layout_height="wrap_content" n1:layout_alignParentBottom="true" n1:layout_centerHorizontal="true">
+        <com.google.android.gms.ads.AdView n1:layout_gravity="center_horizontal" n1:id="@+id/adView_2picstoword_result" n1:visibility="visible" n1:layout_width="wrap_content" n1:layout_height="wrap_content" n2:adSize="SMART_BANNER" n2:adUnitId="@string/admob_banner_id" xmlns:n2="http://schemas.android.com/apk/res-auto" />
+    </LinearLayout>
+</RelativeLayout>
