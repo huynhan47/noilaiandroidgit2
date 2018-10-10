@@ -195,7 +195,7 @@ public class MainActivity extends AppCompatActivity {
             AlertDialog.Builder alertDialogBuildertb1 = new AlertDialog.Builder(this, 1);
             alertDialogBuildertb1.setTitle("Chúc Mừng!");
             ///alertDialogBuildertb1.setIcon(R.drawable.ic_appgame);
-            alertDialogBuildertb1.setMessage("Hết Câu Hỏi Rồi! Chờ Bản Cập Nhật Nhé").setPositiveButton("OK!", new DialogInterface.OnClickListener() {
+            alertDialogBuildertb1.setMessage("Hết Câu Hỏi Rồi! Chờ Bản Cập Nhật Nhé!").setPositiveButton("OK!", new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int id) {
 
                 }
