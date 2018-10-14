@@ -32,7 +32,13 @@
         android:shadowRadius="1"
          />
 
-    <ImageView n1:id="@+id/iv_image_result" n1:layout_width="128dp" n1:layout_height="128dp" n1:layout_margin="5.0dip" n1:scaleType="fitXY" n1:layout_above="@id/resultLayout" n1:layout_centerHorizontal="true" />
+    <ImageView
+        n1:id="@+id/iv_image_result"
+        n1:layout_gravity="center_horizontal"
+        n1:gravity="center" n1:layout_width="128dp"
+        n1:layout_height="128dp" n1:layout_margin="5.0dip"
+        n1:scaleType="fitXY" n1:layout_above="@id/resultLayout"
+        n1:layout_centerHorizontal="true" />
 
     <TextView
         n1:id="@+id/tv_laichu"

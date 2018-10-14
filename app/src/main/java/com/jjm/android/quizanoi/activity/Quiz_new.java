@@ -237,7 +237,7 @@ public class Quiz_new extends AppCompatActivity implements RewardedVideoAdListen
 			}
 		});
 
-		String arch = GlobalVar.finished_question_list.split(",").length+"";
+		String arch = GlobalVar.finished_question_list.split(",").length -1 +"";
 		this.tv_cauhoi.setTypeface(type);
 		this.tv_cauhoi.setText(arch+ "/"+GlobalVar.allQuestion);
 		//
@@ -427,27 +427,21 @@ public class Quiz_new extends AppCompatActivity implements RewardedVideoAdListen
 
 		HienThi(0);
 		} else {
-			AlertDialog.Builder alertDialogBuildertb1 = new AlertDialog.Builder(this, 1);
-			alertDialogBuildertb1.setTitle("Chúc Mừng!");
+			Back_Game();
+			//AlertDialog.Builder alertDialogBuildertb1 = new AlertDialog.Builder(this, 1);
+			//alertDialogBuildertb1.setTitle("Chúc Mừng!");
 			///alertDialogBuildertb1.setIcon(R.drawable.ic_appgame);
-			alertDialogBuildertb1.setMessage("Bạn đã hoàn thành hết các câu hỏi. Các câu hỏi mới sẽ được cập nhật vào phiên bản mới. Trong thời gian chờ đợi mời bạn chinh chiến cùng game Hỏi Ngu Hại Não nà!").setPositiveButton("OK! Chiến thôi", new DialogInterface.OnClickListener() {
-				public void onClick(DialogInterface dialog, int id) {
-					dialog.cancel();
-					///Quiz_new.this.NextGame();
-				}
-			}).setNegativeButton("Để sau!", new DialogInterface.OnClickListener() {
-				public void onClick(DialogInterface dialog, int id) {
-					dialog.cancel();
-					Quiz_new.this.index = 0;
-					///Quiz_new.this.startActivity(new Intent(Quiz_new.this.getApplicationContext(), MainActivity.class));
-					///Quiz_new.this.startActivity(new Intent(Quiz_new.this.getApplicationContext(), MainActivity.class));
-					///Quiz_new.this.finish();
-				}
-			});
-			AlertDialog alertDialog = alertDialogBuildertb1.create();
-			if (!isFinishing()) {
-				alertDialog.show();
-			}
+			//alertDialogBuildertb1.setMessage("Bạn đã hoàn thành hết các câu hỏi. Các câu hỏi mới sẽ được cập nhật vào phiên bản mới.").setPositiveButton("OK! Chiến thôi", new DialogInterface.OnClickListener() {
+			//	public void onClick(DialogInterface dialog, int id) {
+			//		dialog.cancel();
+			//		Back_Game();
+			//	}
+			//});
+
+			//AlertDialog alertDialog = alertDialogBuildertb1.create();
+			//if (!isFinishing()) {
+			//	alertDialog.show();
+			//}
 		}
 		GlobalVar.db.close();
 	}
@@ -504,7 +498,7 @@ public class Quiz_new extends AppCompatActivity implements RewardedVideoAdListen
 		if (temp.toLowerCase().trim().equalsIgnoreCase(tempDataBase.toLowerCase())) {
 			Load_BitCoinTuBoNho();
 			this.index++;
-			GlobalVar.finished_question_list += (",\""+ this.cauhientai._id  +"\""); // ("0001","0002"...); // Add To Finish List
+			GlobalVar.finished_question_list += (",\"" + this.cauhientai._id + "\""); // ("0001","0002"...); // Add To Finish List
 			//GlobalVar.skipQuestionList.replace(this.cauhientai._id+"","0000"); //Remove If Question In Skip List
 			this.score += 10;
 			Save_BitCoinXuongBoNho();
@@ -519,56 +513,14 @@ public class Quiz_new extends AppCompatActivity implements RewardedVideoAdListen
 
 			GlobalVar.laichu = this.cauhientai.laichu;
 			GlobalVar.dapan = this.cauhientai.dapan;
-//			edit.commit();
+			GlobalVar.interAdsIndex++;
+			Quiz_new.this.startActivity(new Intent(Quiz_new.this.getApplicationContext(), KetQuaDungActivity.class));
+			if (GlobalVar.interAdsIndex % 5 == 0 && Quiz_new.this.interstitial.isLoaded()) {
+				Quiz_new.this.interstitial.show();
+			}
+			//openToast(this.traloisaiNN[this.min + ((int) (Math.random() * ((double) ((this.maxi - this.min) + 1))))], this.Hinh_Troll[this.min + ((int) (Math.random() * ((double) ((this.maxi - this.min) + 1))))]);
 
-//			for (l = 0; l < this.arrTV.size(); l++) {
-//				((TextView) this.arrTV.get(l)).setTextColor(Color.parseColor("#3eaa36"));
-//				///this.animhoatHinh = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.shakewin);
-//				((TextView) this.arrTV.get(l)).startAnimation(this.animhoatHinh);
-//			}
-//			if (this.issound.booleanValue() && this.soundwin != null) {
-//				this.soundwin.start();
-//			}
-			this.checkgio = new CountDownTimer(1000, 500) {
-				public void onTick(long millisUntilFinished) {
-				}
-
-				public void onFinish() {
-					try {
-						Quiz_new.this.startActivity(new Intent(Quiz_new.this.getApplicationContext(), KetQuaDungActivity.class));
-						//Quiz_new.this.startActivity(new Intent(Quiz_new.this.getApplicationContext(), KiemBitCoinActivity.class));
-//						if (Quiz_new.this.index != 0 && Quiz_new.this.index % 5 == 0 && Quiz_new.this.interstitial.isLoaded()) {
-							Quiz_new.this.interstitial.show();
-//						}
-						Quiz_new.this.finish();
-					} catch (Exception e) {
-
-					}
-				}
-			}.start();
-			return;
 		}
-//		for (l = 0; l < this.arrTV.size(); l++) {
-//			///this.animhoatHinh = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.shakewin);
-//			((TextView) this.arrTV.get(l)).startAnimation(this.animhoatHinh);
-//		}
-//		if (this.issound.booleanValue() && this.soundloss != null) {
-//			this.soundloss.start();
-//		}
-		openToast(this.traloisaiNN[this.min + ((int) (Math.random() * ((double) ((this.maxi - this.min) + 1))))], this.Hinh_Troll[this.min + ((int) (Math.random() * ((double) ((this.maxi - this.min) + 1))))]);
-		this.checkgio = new CountDownTimer(1000, 500) {
-			public void onTick(long millisUntilFinished) {
-			}
-
-			public void onFinish() {
-				try {
-					if (Quiz_new.this.issound.booleanValue() && Quiz_new.this.soundloss != null && Quiz_new.this.soundloss.isPlaying()) {
-						Quiz_new.this.soundloss.stop();
-					}
-				} catch (Exception e) {
-				}
-			}
-		}.start();
 	}
 	public void Save_CauHoiXuongBoNho() {
 		SharedPreferences.Editor editor = getSharedPreferences("MYDATAREF", 0).edit();
@@ -598,14 +550,14 @@ public class Quiz_new extends AppCompatActivity implements RewardedVideoAdListen
 	public void Load_CauHoiTuBoNho() {
 		try {
 			SharedPreferences pref = getSharedPreferences("MYDATAREF", 0);
-			String index_default = MCrypt.encrypt(this.key_AES, AppEventsConstants.EVENT_PARAM_VALUE_NO);
+			//String index_default = MCrypt.encrypt(this.key_AES, AppEventsConstants.EVENT_PARAM_VALUE_NO);
 			try {
-				this.index = Integer.parseInt(MCrypt.decrypt(this.key_AES, pref.getString("KEY_LINKDOWMLOAD_XYZ_Q", index_default)).trim());
+				//this.index = Integer.parseInt(MCrypt.decrypt(this.key_AES, pref.getString("KEY_LINKDOWMLOAD_XYZ_Q", index_default)).trim());
 				//this.index = 0;
-				GlobalVar.finished_question_list =MCrypt.decrypt(this.key_AES, pref.getString("FINISHED_QUESTION", index_default));
-				GlobalVar.skipQuestionList = MCrypt.decrypt(this.key_AES, pref.getString("SKIP_QUESTION", index_default));
+				GlobalVar.finished_question_list =MCrypt.decrypt(this.key_AES, pref.getString("FINISHED_QUESTION", "0000"));
+				GlobalVar.skipQuestionList = MCrypt.decrypt(this.key_AES, pref.getString("SKIP_QUESTION", "0000"));
 			} catch (Exception e) {
-				this.index = Integer.parseInt(MCrypt.decrypt(this.key_AES, index_default).trim());
+				//this.index = Integer.parseInt(MCrypt.decrypt(this.key_AES, index_default).trim());
 				GlobalVar.finished_question_list ="\"0000\"";
 				GlobalVar.skipQuestionList = "\"0000\"";
 			}
@@ -617,7 +569,7 @@ public class Quiz_new extends AppCompatActivity implements RewardedVideoAdListen
 			SharedPreferences pref = getSharedPreferences("MYDATAREF", 0);
 			String score_default = MCrypt.encrypt(this.key_AES, "100");
 			try {
-				this.score = Integer.parseInt(MCrypt.decrypt(this.key_AES, pref.getString("KEY_LINKDOWMLOAD_ABC_KT", score_default)).trim());
+				this.score = Integer.parseInt(MCrypt.decrypt(this.key_AES, pref.getString("BIT_SCORE", score_default)).trim());
 			} catch (Exception e) {
 				this.score = Integer.parseInt(MCrypt.decrypt(this.key_AES, score_default).trim());
 			}
@@ -627,11 +579,11 @@ public class Quiz_new extends AppCompatActivity implements RewardedVideoAdListen
 
 	public void Save_BitCoinXuongBoNho() {
 		SharedPreferences.Editor editor = getSharedPreferences("MYDATAREF", 0).edit();
-//		try {
-//			editor.putString("KEY_LINKDOWMLOAD_ABC_KT", MCrypt.encrypt(this.key_AES, String.valueOf(this.score)));
-//		} catch (Exception e) {
-//		}
-		editor.putInt("KEY_RUBY_SCORE", this.score);
+		try {
+			editor.putString("BIT_SCORE", MCrypt.encrypt(this.key_AES, String.valueOf(this.score)));
+		} catch (Exception e) {
+		}
+		//editor.putInt("BIT_SCORE", this.score);
 		editor.commit();
 	}
 
@@ -671,8 +623,8 @@ public class Quiz_new extends AppCompatActivity implements RewardedVideoAdListen
         //unknow this.interstitial.setAdUnitId("ca-app-pub-4345988626634460/5985115542");
 		this.interstitial.setAdUnitId("ca-app-pub-8204407936442788/4768896864"); //Android Prd Inter Paper Hero
         this.interstitial.loadAd(new AdRequest.Builder()
-				//.addTestDevice("9038137B1975D034E005EEE96541909F")
-				//.addTestDevice("5EAF8DE05E8974A7D5C369BD0A00C22B")
+				.addTestDevice("9038137B1975D034E005EEE96541909F")
+				.addTestDevice("5EAF8DE05E8974A7D5C369BD0A00C22B")
 				.build());
 
 }
@@ -693,7 +645,7 @@ public class Quiz_new extends AppCompatActivity implements RewardedVideoAdListen
 //			public void onClick(DialogInterface dialog, int id) {
 //				dialog.cancel();
 				Quiz_new.this.startActivity(new Intent(Quiz_new.this, MainActivity.class));
-				if (Quiz_new.this.slopen != 0 && Quiz_new.this.slopen % 3 == 0 && Quiz_new.this.interstitial.isLoaded()) {
+				if (Quiz_new.this.slopen != 0 && Quiz_new.this.slopen % 4 == 0 && Quiz_new.this.interstitial.isLoaded()) {
 					Quiz_new.this.interstitial.show();
 				}
 				Quiz_new.this.slopen++;
@@ -773,7 +725,7 @@ public class Quiz_new extends AppCompatActivity implements RewardedVideoAdListen
 			}
 			Intent intent = new Intent("android.intent.action.SEND");
 			intent.putExtra("android.intent.extra.SUBJECT", "Share Your Friends!");
-			intent.putExtra("android.intent.extra.TITLE", "Chơi Game 2 Hình 1 Chữ với mình nào!");
+			intent.putExtra("android.intent.extra.TITLE", "Help Help!");
 			intent.putExtra("android.intent.extra.STREAM", imageuri);
 			intent.setType("image/*");
 			startActivity(intent);
@@ -834,7 +786,7 @@ public class Quiz_new extends AppCompatActivity implements RewardedVideoAdListen
 		Load_BitCoinTuBoNho();
 		AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this, 1);
 		alertDialogBuilder.setTitle("Tạm Bỏ Qua");
-        alertDialogBuilder.setIcon(R.drawable.e_1);
+        alertDialogBuilder.setIcon(R.drawable.e_6);
 
 //		Dialog dialog;
 //        dialog=new Dialog(this);
@@ -842,12 +794,12 @@ public class Quiz_new extends AppCompatActivity implements RewardedVideoAdListen
 //        dialog.setTitle("Player");
 //        dialog.setContentView(R.layout.custom_dialog);
 		//alertDialogBuilder.setIcon(R.drawable.ic_appgame);
-		alertDialogBuilder.setMessage("Dùng 100 Bitcon Để Tạm Bỏ Qua! Sau Khi Trả Lời Hết Sẽ Quay Lại").setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+		alertDialogBuilder.setMessage("Dùng 10 Bitcon Để Tạm Bỏ Qua! Sau Khi Trả Lời Hết Sẽ Quay Lại!!").setPositiveButton("Yes", new DialogInterface.OnClickListener() {
 			public void onClick(DialogInterface dialog, int id) {
 				 if (Quiz_new.this.score > 0 ) {
 					//Quiz_new.this.index++;
 					 GlobalVar.skipQuestionList += (",\""+ Quiz_new.this.cauhientai._id  +"\""); // ("0001","0002"...);
-					Quiz_new.this.score -= 0;
+					Quiz_new.this.score -= 10 ;
 					Quiz_new.this.Save_BitCoinXuongBoNho();
 					Quiz_new.this.Save_CauHoiXuongBoNho();
 					Quiz_new.this.recreate();
@@ -877,8 +829,8 @@ public class Quiz_new extends AppCompatActivity implements RewardedVideoAdListen
 	}
 	@Override
 	public void onRewarded(RewardItem reward) {
-		Toast.makeText(this, "onRewarded! currency: " + reward.getType() + "  amount: " +
-				reward.getAmount(), Toast.LENGTH_SHORT).show();
+		//Toast.makeText(this, "onRewarded! currency: " + reward.getType() + "  amount: " +
+		//		reward.getAmount(), Toast.LENGTH_SHORT).show();
 		// Reward the user.
 		//this.score += 100;
 		///this.Save_BitCoinXuongBoNho();
@@ -896,14 +848,14 @@ public class Quiz_new extends AppCompatActivity implements RewardedVideoAdListen
 
 	@Override
 	public void onRewardedVideoAdLeftApplication() {
-		Toast.makeText(this, "onRewardedVideoAdLeftApplication",
-				Toast.LENGTH_SHORT).show();
+		//Toast.makeText(this, "onRewardedVideoAdLeftApplication",
+		//		Toast.LENGTH_SHORT).show();
 	}
 
 	@Override
 	public void onRewardedVideoAdClosed() {
 		//play_flag =false;
-		Toast.makeText(this, "onRewardedVideoAdClosed", Toast.LENGTH_SHORT).show();
+		//Toast.makeText(this, "onRewardedVideoAdClosed", Toast.LENGTH_SHORT).show();
 		//this.btn_watch_video.setVisibility(View.INVISIBLE) ;
 		//this.loading.setVisibility(View.VISIBLE) ;
 		mRewardedVideoAd.loadAd(
@@ -917,7 +869,7 @@ public class Quiz_new extends AppCompatActivity implements RewardedVideoAdListen
 
 	@Override
 	public void onRewardedVideoAdFailedToLoad(int errorCode) {
-		Toast.makeText(this, "onRewardedVideoAdFailedToLoad" + errorCode, Toast.LENGTH_SHORT).show();
+		//Toast.makeText(this, "onRewardedVideoAdFailedToLoad" + errorCode, Toast.LENGTH_SHORT).show();
 //		this.btn_watch_video.setVisibility(View.INVISIBLE) ;
 //		this.loading.setVisibility(View.VISIBLE) ;
 //		try { Thread.sleep(1000); }
@@ -966,17 +918,17 @@ public class Quiz_new extends AppCompatActivity implements RewardedVideoAdListen
 
 	@Override
 	public void onRewardedVideoAdLoaded() {
-		Toast.makeText(this, "onRewardedVideoAdLoaded", Toast.LENGTH_SHORT).show();
+		//Toast.makeText(this, "onRewardedVideoAdLoaded", Toast.LENGTH_SHORT).show();
 
 	}
 
 	@Override
 	public void onRewardedVideoAdOpened() {
-		Toast.makeText(this, "onRewardedVideoAdOpened", Toast.LENGTH_SHORT).show();
+		//Toast.makeText(this, "onRewardedVideoAdOpened", Toast.LENGTH_SHORT).show();
 	}
 
 	@Override
 	public void onRewardedVideoStarted() {
-		Toast.makeText(this, "onRewardedVideoStarted", Toast.LENGTH_SHORT).show();
+		//Toast.makeText(this, "onRewardedVideoStarted", Toast.LENGTH_SHORT).show();
 	}
 }

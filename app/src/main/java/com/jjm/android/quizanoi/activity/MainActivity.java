@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
     TextView bitscore;
 
     //int version = 3;
-    int score = 0;
+    int score = 30 ;
     List<CauHoi> ds_cauhoi;
   
     Typeface type;
@@ -99,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
         Load_CauHoiTuBoNho();
         LoadCauHoi();
         Load_BitCoinTuBoNho();
-        String arch = GlobalVar.finished_question_list.split(",").length+"";
+        String arch = GlobalVar.finished_question_list.split(",").length - 1+"";
         GlobalVar.allQuestion = this.ds_cauhoi.size();
         this.archivement.setTypeface(type);
         this.archivement.setText(arch+ "/"+GlobalVar.allQuestion+"");
@@ -121,18 +121,18 @@ public class MainActivity extends AppCompatActivity {
         alertDialogBuilder.setMessage("Game Sẽ Bắt Đầu Lại Từ Đầu, Bạn Chắc Chắn Chứ").setPositiveButton("Chắc Chắn", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
                 SharedPreferences.Editor editor = getSharedPreferences("MYDATAREF", 0).edit();
-                score = 100;
+                score = 30;
                 GlobalVar.finished_question_list ="\"0000\"";
                 GlobalVar.skipQuestionList ="\"0000\"";
 
                 try {
-                    editor.putString("KEY_LINKDOWMLOAD_ABC_KT", MCrypt.encrypt( GlobalVar.key_AES, String.valueOf( score)));
+                    editor.putString("BIT_SCORE", MCrypt.encrypt( GlobalVar.key_AES, String.valueOf( score)));
                     editor.putString("FINISHED_QUESTION", MCrypt.encrypt(GlobalVar.key_AES, String.valueOf( GlobalVar.finished_question_list)));
                     editor.putString("SKIP_QUESTION", MCrypt.encrypt(GlobalVar.key_AES, String.valueOf( GlobalVar.skipQuestionList )));
                 } catch (Exception e) {
 
                 }
-                editor.putInt("KEY_RUBY_SCORE",  score);
+
                 editor.commit();
                 MainActivity.this.recreate();
             }
@@ -167,9 +167,9 @@ public class MainActivity extends AppCompatActivity {
     public void Load_BitCoinTuBoNho() {
         try {
             SharedPreferences pref = getSharedPreferences("MYDATAREF", 0);
-            String score_default = MCrypt.encrypt(GlobalVar.key_AES, "100");
+            String score_default = MCrypt.encrypt(GlobalVar.key_AES, "30");
             try {
-                this.score = Integer.parseInt(MCrypt.decrypt(GlobalVar.key_AES, pref.getString("KEY_LINKDOWMLOAD_ABC_KT", score_default)).trim());
+                this.score = Integer.parseInt(MCrypt.decrypt(GlobalVar.key_AES, pref.getString("BIT_SCORE", score_default)).trim());
             } catch (Exception e) {
                 this.score = Integer.parseInt(MCrypt.decrypt(GlobalVar.key_AES, score_default).trim());
             }
@@ -193,9 +193,9 @@ public class MainActivity extends AppCompatActivity {
             //HienThi(0);
         } else {
             AlertDialog.Builder alertDialogBuildertb1 = new AlertDialog.Builder(this, 1);
-            alertDialogBuildertb1.setTitle("Chúc Mừng!");
+            alertDialogBuildertb1.setTitle("Chúc Mừng!!");
             ///alertDialogBuildertb1.setIcon(R.drawable.ic_appgame);
-            alertDialogBuildertb1.setMessage("Hết Câu Hỏi Rồi! Chờ Bản Cập Nhật Nhé!").setPositiveButton("OK!", new DialogInterface.OnClickListener() {
+            alertDialogBuildertb1.setMessage("Hết Câu Hỏi Rồi! Chờ Bản Cập Nhật Nhé").setPositiveButton("OK!", new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int id) {
 
                 }

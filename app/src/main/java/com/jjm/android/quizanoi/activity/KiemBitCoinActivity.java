@@ -34,7 +34,7 @@ public class KiemBitCoinActivity extends AppCompatActivity implements RewardedVi
     TextView tv_bitcoin;
     Typeface type;
     String key_AES = "anoistudio.duoihinhlaichu";
-    int score = 100;
+    int score = 30;
     int tryTime =0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,7 +71,7 @@ public class KiemBitCoinActivity extends AppCompatActivity implements RewardedVi
         Toast.makeText(this, "onRewarded! currency: " + reward.getType() + "  amount: " +
                 reward.getAmount(), Toast.LENGTH_SHORT).show();
         // Reward the user.
-        this.score += 100;
+        //this.score += 100;
         this.Save_BitCoinXuongBoNho();
         this.Load_BitCoinTuBoNho();
         //this.Save_CauHoiXuongBoNho();
@@ -337,7 +337,7 @@ public class KiemBitCoinActivity extends AppCompatActivity implements RewardedVi
             SharedPreferences pref = getSharedPreferences("MYDATAREF", 0);
             String score_default = MCrypt.encrypt(this.key_AES, "100");
             try {
-                this.score = Integer.parseInt(MCrypt.decrypt(this.key_AES, pref.getString("KEY_LINKDOWMLOAD_ABC_KT", score_default)).trim());
+                this.score = Integer.parseInt(MCrypt.decrypt(this.key_AES, pref.getString("BIT_SCORE", score_default)).trim());
             } catch (Exception e) {
                 this.score = Integer.parseInt(MCrypt.decrypt(this.key_AES, score_default).trim());
             }
@@ -349,10 +349,10 @@ public class KiemBitCoinActivity extends AppCompatActivity implements RewardedVi
     public void Save_BitCoinXuongBoNho() {
         Editor editor = getSharedPreferences("MYDATAREF", 0).edit();
         try {
-            editor.putString("KEY_LINKDOWMLOAD_ABC_KT", MCrypt.encrypt(this.key_AES, String.valueOf(this.score)));
+            editor.putString("BIT_SCORE", MCrypt.encrypt(this.key_AES, String.valueOf(this.score)));
         } catch (Exception e) {
         }
-        editor.putInt("KEY_RUBY_SCORE", this.score);
+        editor.putInt("BIT_SCORE", this.score);
         editor.commit();
     }
 

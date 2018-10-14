@@ -20,9 +20,10 @@ import com.jjm.android.quizanoi.model.DataSource;
 import com.jjm.android.quizanoi.util.MCrypt;
 
 public class QuanlyCauHoi extends SQLiteOpenHelper {
-    private static final int DATABASE_VERSION = 3;
+    //private static final int DATABASE_VERSION = 3;
     //private static String DB_NAME = "db_tdp.sqlite";
-    private static String DB_NAME = "laichu1.db";
+    //private static String DB_NAME = "laichu1.db";
+    private static String DB_NAME = "laichu.db";
     //private static String DB_PATH = "/data/data/com.jjm.android.quizanoi/databases/";
     private static String DB_PATH = "";
     private static final String TABLE_NAME = "laichu";
@@ -31,7 +32,7 @@ public class QuanlyCauHoi extends SQLiteOpenHelper {
     private SQLiteDatabase myDataBase;
 
     public QuanlyCauHoi(Context context) {
-        super(context, DB_NAME, null,3);
+        super(context, DB_NAME, null,4);
         this.myContext = context;
         DB_PATH = myContext.getApplicationInfo().dataDir+"/databases/";
 
@@ -154,7 +155,7 @@ public int QuestionCount ()
         String sqlSkipList = "select * from laichu where id  in ( " + skip_question_list + " )";
 
         StringBuilder sb_queryQuestion = new StringBuilder();
-        sb_queryQuestion.append("select * from laichu where id not in ( " + finish_question_list + ","+ skip_question_list + " )");
+        sb_queryQuestion.append("select * from laichu where id not in ( " + finish_question_list + ","+ skip_question_list + " ) order by id ");
         //sb_queryQuestion.append(" union all ")  ;
         //sb_queryQuestion.append("select * from laichu where id not in ( " + skip_question_list + " )");
         try {
@@ -175,8 +176,8 @@ public int QuestionCount ()
                 x.kitu = contro.getString(2);
                 //x.firstword = contro.getString(2);
                 //x.secondword = contro.getString(3);
-                x.dapan = contro.getString(6);
-                x.laichu = contro.getString(5);
+                x.dapan = contro.getString(5 );
+                x.laichu = contro.getString(6 );
                 x.soluongkitu = Integer.parseInt(contro.getString(3));
                 ds_cauhoi.add(x);
                 GlobalVar.skipQuestionList = GlobalVar.skipQuestionList.replace(",\""+ x._id +"\"","");
